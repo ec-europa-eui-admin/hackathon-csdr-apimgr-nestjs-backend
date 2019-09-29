@@ -4,13 +4,6 @@
   "version": "1.0.0",
   "description": "Nest TypeScript starter repository",
   "license": "MIT",
-  "scripts": {
-    "build": "nest build",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main"
-  },
   "dependencies": {
     "@nestjs/common": "^6.7.1",
     "@nestjs/core": "^6.7.1",
