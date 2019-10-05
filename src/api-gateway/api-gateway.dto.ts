@@ -1,20 +1,31 @@
-export class ApiGateWayDto {
+import { ApiModelProperty } from '@nestjs/swagger';
+
+export class ApiGateWayAppDto {
+    @ApiModelProperty()
     readonly name: string;
+    @ApiModelProperty()
     readonly apiGateWayId: string;
-    readonly subscribedSources: Array<string>;
 }
 
 
-export type ApiGatewayAppSubscriptions = {
-    subscriptionId: string,
-    apiIdentifier: string,
-    applicationId: string,
-    tier: string,
-    callError: boolean,
-    callErrorMessage: string,
-    callID: string
+export class AppSubscriptionsDto {
+    @ApiModelProperty()
+    readonly subscriptionId: string;
+    @ApiModelProperty()
+    readonly apiIdentifier: string;
+    @ApiModelProperty()
+    readonly applicationId: string;
+    @ApiModelProperty()
+    readonly tier: string;
+    @ApiModelProperty()
+    readonly callError: boolean;
+    @ApiModelProperty()
+    readonly callErrorMessage: string;
+    @ApiModelProperty()
+    readonly callID: string;
 }
 
-export type ApiGateWayAppSubscribeToApi={
-    idList: Array<String>
+export class ApiIdListDto {
+    @ApiModelProperty()
+    idList: Array<String>;
 }

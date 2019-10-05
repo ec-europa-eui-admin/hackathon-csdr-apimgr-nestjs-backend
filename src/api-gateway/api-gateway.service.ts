@@ -1,8 +1,7 @@
 import { Injectable, HttpService, Inject } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { AxiosResponse } from 'axios';
-import { ApiGateWayAppSubscribeToApi, ApiGatewayAppSubscriptions } from './api-gateway.dto';
+import { ApiGateWayAppDto, ApiIdListDto, AppSubscriptionsDto } from './api-gateway.dto';
 
 @Injectable()
 export class ApiGatewayService {
@@ -13,7 +12,7 @@ export class ApiGatewayService {
 
     }
 
-    getGatewayApps(): Observable<AxiosResponse<any>> {
+    getGatewayApps(): Observable<Array<ApiGateWayAppDto>> {
         let username = this.username;
         let password = this.password;
         const url = 'https://gateway.theinterlink.eu:8443/application';
@@ -26,7 +25,7 @@ export class ApiGatewayService {
             map(data => data.list));
     }
 
-    getAppSubscriptions(appId: string): Observable<Array<ApiGatewayAppSubscriptions>> {
+    getAppSubscriptions(appId: string): Observable<Array<AppSubscriptionsDto>> {
         let username = this.username;
         let password = this.password;
         const url = 'https://gateway.theinterlink.eu:8443/subscription/application/' + appId;
@@ -39,7 +38,7 @@ export class ApiGatewayService {
             map(data => data.list));
     }
 
-    getRestDetail(appName: string): Observable<any> {
+    getRestDetail(appName: string): Observable<AppSubscriptionsDto> {
         let username = this.username;
         let password = this.password;
         const url = 'https://gateway.theinterlink.eu:8443/rest';
@@ -53,7 +52,7 @@ export class ApiGatewayService {
             },
         }).pipe(
             map(res => res.data),
-            map(data => data.list),
+            map(data => data.list[0]),
         );
     }
 
@@ -64,7 +63,7 @@ export class ApiGatewayService {
         return cleanedArray.join('-');
     }
 
-    subscribeToApi(appId: string, data: ApiGateWayAppSubscribeToApi): Observable<ApiGatewayAppSubscriptions> {
+    subscribeToApi(appId: string, data: ApiIdListDto): any {
         let username = this.username;
         let password = this.password;
         const url = 'https://gateway.theinterlink.eu:8443/subscription/' + appId + '/apis';

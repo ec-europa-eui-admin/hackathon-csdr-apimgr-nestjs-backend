@@ -9,17 +9,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
-const eui_apps_controller_1 = require("./eui-apps/eui-apps.controller");
-const api_gateway_controller_1 = require("./api-gateway/api-gateway.controller");
-const api_gateway_service_1 = require("./api-gateway/api-gateway.service");
-const eui_apps_service_1 = require("./eui-apps/eui-apps.service");
+const mongoose_1 = require("@nestjs/mongoose");
+const eui_apps_module_1 = require("./eui-apps/eui-apps.module");
+const api_gateway_module_1 = require("./api-gateway/api-gateway.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [common_1.HttpModule],
-        controllers: [app_controller_1.AppController, eui_apps_controller_1.EuiAppsController, api_gateway_controller_1.ApiGatewayController],
-        providers: [app_service_1.AppService, api_gateway_service_1.ApiGatewayService, eui_apps_service_1.EuiAppsService],
+        imports: [
+            common_1.HttpModule,
+            mongoose_1.MongooseModule.forRoot('mongodb://localhost:27017'),
+            eui_apps_module_1.EuiAppsModule,
+            api_gateway_module_1.ApiGatewayModule,
+        ],
+        controllers: [app_controller_1.AppController],
+        providers: [app_service_1.AppService],
     })
 ], AppModule);
 exports.AppModule = AppModule;

@@ -2,35 +2,36 @@ import { Controller, Get, Query, Post, Body, Put, Param, Delete } from '@nestjs/
 import { ApiGatewayService } from './api-gateway.service';
 import { map, switchMap } from 'rxjs/operators';
 import { forkJoin } from 'rxjs';
-import { ApiGateWayAppSubscribeToApi } from './api-gateway.dto';
+import { ApiGateWayAppDto, ApiIdListDto } from './api-gateway.dto';
+import { Observable } from 'rxjs';
+import { ApiUseTags } from '@nestjs/swagger';
 
+@ApiUseTags('api-gateway')
 @Controller('api-gateway')
 export class ApiGatewayController {
     constructor(private apiGatewayService: ApiGatewayService,
     ) {
     }
 
-    @Get()
-    findAll(@Query() query: any): any {
+    @Get('applications')
+    findAll(@Query() query: any): Observable<Array<ApiGateWayAppDto>> {
         return this.apiGatewayService.getGatewayApps();
     }
 
-    @Get(':id')
-    findOne(@Param('id') id: string): any {
-        return this.apiGatewayService.getAppSubscriptions(id).pipe(
+    @Get('subscriptions/:appId')
+    findOne(@Param('appId') appId: string): any {
+        return this.apiGatewayService.getAppSubscriptions(appId).pipe(
             map(apiS => apiS.map((api) => this.apiGatewayService.getApiName(api.apiIdentifier))),
-            switchMap((apiNames) => {
+            switchMap((apiNames: Array<string>) => {
                 const requests = apiNames.map((apiName) => this.apiGatewayService.getRestDetail(apiName));
-
                 // group all the observables with forkJoin and deep merge them
                 return forkJoin(requests);
-            }),
-            map(sources => sources),
+            })
         );
     }
 
-    @Put(':id')
-    update(@Param('id') id: string, @Body() apiGateWayAppSubscribeToApi: ApiGateWayAppSubscribeToApi): any {
-        return this.apiGatewayService.subscribeToApi(id, apiGateWayAppSubscribeToApi);
+    @Put('subscribe-to-api/:appId')
+    update(@Param('appId') appId: string, @Body() apiIdList: ApiIdListDto): any {
+        return this.apiGatewayService.subscribeToApi(appId, apiIdList);
     }
 }

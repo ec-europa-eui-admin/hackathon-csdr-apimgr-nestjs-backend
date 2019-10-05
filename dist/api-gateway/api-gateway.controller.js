@@ -16,6 +16,9 @@ const common_1 = require("@nestjs/common");
 const api_gateway_service_1 = require("./api-gateway.service");
 const operators_1 = require("rxjs/operators");
 const rxjs_1 = require("rxjs");
+const api_gateway_dto_1 = require("./api-gateway.dto");
+const rxjs_2 = require("rxjs");
+const swagger_1 = require("@nestjs/swagger");
 let ApiGatewayController = class ApiGatewayController {
     constructor(apiGatewayService) {
         this.apiGatewayService = apiGatewayService;
@@ -23,38 +26,39 @@ let ApiGatewayController = class ApiGatewayController {
     findAll(query) {
         return this.apiGatewayService.getGatewayApps();
     }
-    findOne(id) {
-        return this.apiGatewayService.getAppSubscriptions(id).pipe(operators_1.map(apiS => apiS.map((api) => this.apiGatewayService.getApiName(api.apiIdentifier))), operators_1.switchMap((apiNames) => {
+    findOne(appId) {
+        return this.apiGatewayService.getAppSubscriptions(appId).pipe(operators_1.map(apiS => apiS.map((api) => this.apiGatewayService.getApiName(api.apiIdentifier))), operators_1.switchMap((apiNames) => {
             const requests = apiNames.map((apiName) => this.apiGatewayService.getRestDetail(apiName));
             return rxjs_1.forkJoin(requests);
-        }), operators_1.map(sources => sources));
+        }));
     }
-    update(id, apiGateWayAppSubscribeToApi) {
-        return this.apiGatewayService.subscribeToApi(id, apiGateWayAppSubscribeToApi);
+    update(appId, apiIdList) {
+        return this.apiGatewayService.subscribeToApi(appId, apiIdList);
     }
 };
 __decorate([
-    common_1.Get(),
+    common_1.Get('applications'),
     __param(0, common_1.Query()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Object)
+    __metadata("design:returntype", rxjs_2.Observable)
 ], ApiGatewayController.prototype, "findAll", null);
 __decorate([
-    common_1.Get(':id'),
-    __param(0, common_1.Param('id')),
+    common_1.Get('subscriptions/:appId'),
+    __param(0, common_1.Param('appId')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Object)
 ], ApiGatewayController.prototype, "findOne", null);
 __decorate([
-    common_1.Put(':id'),
-    __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+    common_1.Put('subscribe-to-api/:appId'),
+    __param(0, common_1.Param('appId')), __param(1, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:paramtypes", [String, api_gateway_dto_1.ApiIdListDto]),
     __metadata("design:returntype", Object)
 ], ApiGatewayController.prototype, "update", null);
 ApiGatewayController = __decorate([
+    swagger_1.ApiUseTags('api-gateway'),
     common_1.Controller('api-gateway'),
     __metadata("design:paramtypes", [api_gateway_service_1.ApiGatewayService])
 ], ApiGatewayController);

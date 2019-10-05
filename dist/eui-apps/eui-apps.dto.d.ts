@@ -1,10 +1,16 @@
+export declare class AppConfigurationDto {
+    readonly features: object;
+    readonly openIdConnect: object;
+    readonly modules: object;
+}
+export declare class EnvConfigDto {
+    readonly envName: string;
+    readonly configuration: AppConfigurationDto;
+    readonly apiGatewayAppId: string;
+}
 export declare class EuiAppDto {
     readonly name: string;
-    readonly envConfigs: Array<EnvConfig>;
+    readonly desc: string;
+    readonly envConfigs: Array<EnvConfigDto>;
     readonly appRole: string;
-}
-export declare class EnvConfig {
-    readonly envName: string;
-    readonly configuration: object;
-    readonly apiGatewayAppId: string;
 }

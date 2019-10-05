@@ -1,15 +1,20 @@
 import { Module, HttpModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { EuiAppsController } from './eui-apps/eui-apps.controller';
-import { ApiGatewayController } from './api-gateway/api-gateway.controller';
-import { ApiGatewayService } from './api-gateway/api-gateway.service';
-import { EuiAppsService } from './eui-apps/eui-apps.service';
+import { MongooseModule } from '@nestjs/mongoose';
+import { Connection } from 'mongoose';
+import { EuiAppsModule } from './eui-apps/eui-apps.module';
+import { ApiGatewayModule } from './api-gateway/api-gateway.module';
 
 @Module({
-    imports: [HttpModule],
-    controllers: [AppController, EuiAppsController, ApiGatewayController],
-    providers: [AppService, ApiGatewayService, EuiAppsService],
+    imports: [
+        HttpModule,
+        MongooseModule.forRoot('mongodb://localhost:27017'),
+        EuiAppsModule,
+        ApiGatewayModule,
+    ],
+    controllers: [AppController],
+    providers: [AppService],
 })
 export class AppModule {
 }

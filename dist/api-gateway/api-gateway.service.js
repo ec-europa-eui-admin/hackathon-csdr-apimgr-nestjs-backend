@@ -51,7 +51,7 @@ let ApiGatewayService = class ApiGatewayService {
                 username,
                 password,
             },
-        }).pipe(operators_1.map(res => res.data), operators_1.map(data => data.list));
+        }).pipe(operators_1.map(res => res.data), operators_1.map(data => data.list[0]));
     }
     getApiName(apiIdentifier) {
         const encodedName = decodeURI(apiIdentifier);

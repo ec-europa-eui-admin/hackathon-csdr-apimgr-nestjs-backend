@@ -14,21 +14,35 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const eui_apps_dto_1 = require("./eui-apps.dto");
+const eui_apps_service_1 = require("./eui-apps.service");
+const swagger_1 = require("@nestjs/swagger");
 let EuiAppsController = class EuiAppsController {
-    create(createEuiAppDto) {
-        return 'This action adds a new cat';
+    constructor(euiAppsService) {
+        this.euiAppsService = euiAppsService;
     }
-    findAll(query) {
-        return `This action returns all cats (limit: ${query.limit} items)`;
+    create(createEuiAppDto) {
+        return this.euiAppsService.create(createEuiAppDto);
+    }
+    findAll() {
+        return this.euiAppsService.findAll();
     }
     findOne(id) {
-        return `This action returns a #${id} cat`;
+        return this.euiAppsService.findOne(id);
     }
-    update(id, updateCatDto) {
-        return `This action updates a #${id} cat`;
+    update(id, updateEuiAppDto) {
+        return this.euiAppsService.update(id, updateEuiAppDto);
+    }
+    save(id, updateEuiAppDto) {
+        return this.euiAppsService.save(id, updateEuiAppDto);
+    }
+    updateEnvConfig(appId, envConfigId, updateEnvConfigDto) {
+        return this.euiAppsService.updateEnvConfig(appId, envConfigId, updateEnvConfigDto);
+    }
+    updateAppConfig(appId, appConfigId, updateEnvConfigDto) {
+        return this.euiAppsService.updateAppConfig(appId, appConfigId, updateEnvConfigDto);
     }
     remove(id) {
-        return `This action removes a #${id} cat`;
+        return this.euiAppsService.remove(id);
     }
 };
 __decorate([
@@ -36,14 +50,13 @@ __decorate([
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [eui_apps_dto_1.EuiAppDto]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], EuiAppsController.prototype, "create", null);
 __decorate([
     common_1.Get(),
-    __param(0, common_1.Query()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
 ], EuiAppsController.prototype, "findAll", null);
 __decorate([
     common_1.Get(':id'),
@@ -57,17 +70,40 @@ __decorate([
     __param(0, common_1.Param('id')), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, eui_apps_dto_1.EuiAppDto]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], EuiAppsController.prototype, "update", null);
+__decorate([
+    common_1.Post(':id'),
+    __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, eui_apps_dto_1.EuiAppDto]),
+    __metadata("design:returntype", Promise)
+], EuiAppsController.prototype, "save", null);
+__decorate([
+    common_1.Post('env-config/:appId/:envConfigId'),
+    __param(0, common_1.Param('appId')), __param(1, common_1.Param('envConfigId')), __param(2, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String, eui_apps_dto_1.EnvConfigDto]),
+    __metadata("design:returntype", Promise)
+], EuiAppsController.prototype, "updateEnvConfig", null);
+__decorate([
+    common_1.Post('app-config/:appId/:appConfigId'),
+    __param(0, common_1.Param('appId')), __param(1, common_1.Param('appConfigId')), __param(2, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String, eui_apps_dto_1.AppConfigurationDto]),
+    __metadata("design:returntype", Promise)
+], EuiAppsController.prototype, "updateAppConfig", null);
 __decorate([
     common_1.Delete(':id'),
     __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], EuiAppsController.prototype, "remove", null);
 EuiAppsController = __decorate([
-    common_1.Controller('eui-apps')
+    swagger_1.ApiUseTags('eui-apps'),
+    common_1.Controller('eui-apps'),
+    __metadata("design:paramtypes", [eui_apps_service_1.EuiAppsService])
 ], EuiAppsController);
 exports.EuiAppsController = EuiAppsController;
 //# sourceMappingURL=eui-apps.controller.js.map

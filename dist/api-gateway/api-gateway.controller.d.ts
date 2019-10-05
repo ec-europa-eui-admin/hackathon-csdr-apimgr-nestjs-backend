@@ -1,9 +1,10 @@
 import { ApiGatewayService } from './api-gateway.service';
-import { ApiGateWayAppSubscribeToApi } from './api-gateway.dto';
+import { ApiGateWayAppDto, ApiIdListDto } from './api-gateway.dto';
+import { Observable } from 'rxjs';
 export declare class ApiGatewayController {
     private apiGatewayService;
     constructor(apiGatewayService: ApiGatewayService);
-    findAll(query: any): any;
-    findOne(id: string): any;
-    update(id: string, apiGateWayAppSubscribeToApi: ApiGateWayAppSubscribeToApi): any;
+    findAll(query: any): Observable<Array<ApiGateWayAppDto>>;
+    findOne(appId: string): any;
+    update(appId: string, apiIdList: ApiIdListDto): any;
 }

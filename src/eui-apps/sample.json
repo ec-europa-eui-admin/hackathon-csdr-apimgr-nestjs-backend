@@ -1,0 +1,503 @@
+{
+    "name": "App 1",
+    "desc": "App 1 Desc",
+    "envConfigs": [
+        {
+            "envName": "TEST",
+            "configuration": {
+                "features": {
+                    "zipkin": {
+                        "enabled": false
+                    }
+                },
+                "openIdConnect": {
+                    "enabled": true,
+                    "stripIdTokenFromLocation": true,
+                    "maximumRequestRetries": 1,
+                    "metadataUrl": "https://webgate.ec.testa.eu/cas/oauth2/.well-known/openid-configuration",
+                    "authorizeUrl": "https://webgate.ec.testa.eu/cas/oauth2/authorize",
+                    "logoutUrl": "https://webgate.ec.testa.eu/cas/logout",
+                    "euLoginAccessTokenUrl": "https://webgate.ec.testa.eu/cas/oauth2/token",
+                    "spaClientId": "O3ClzlUfxEsREdQM8xBorRODJiE676Xy43TLN0GwNMGtQjjXnbtv3Lo8M6rNY9WpzcsvezuV7M5zh3p2vZs9cL4-Jj71zxYb8yr7ujzQt669zSG",
+                    "spaRedirectUrl": "https://webgate.acceptance.ec.testa.eu/mwp/",
+                    "apiGatewayAccessTokenUrl": "https://api.tech.ec.europa.eu/gateway/token",
+                    "apiGatewayAccessTokenAudienceId": "DFlp4emQ6jCLjNw8U7ko18zNjb9bwJ3ACrnP89iPsVv4zcChOEVRPHCT88Q7jPpNGCFa0hJEtV77rBj6L1XvOt-Jj71zxYb8yr7ujzQt669zSG",
+                    "apiGatewayConsumerKey": "eSWwqUjsyNkvKDfRCBsbHeORrA0a",
+                    "apiGatewayServices": {
+                        "iopServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/restproxy/*",
+                            "audienceId": "mfKE5mbIiMbYmzocxigbTAWfNZ0Q04EUJRUhX1Y9zWnLnWZwN0qreRcUoaP11adtu4IQPzpbbhskDxwBqZqj1tG-Jj71zxYb8yr7ujzQt669zSG"
+                        },
+                        "iopAuxiliaryServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/iop-auxiliary-rest/*",
+                            "audienceId": "mfKE5mbIiMbYmzocxigbTAWfNZ0Q04EUJRUhX1Y9zWnLnWZwN0qreRcUoaP11adtu4IQPzpbbhskDxwBqZqj1tG-Jj71zxYb8yr7ujzQt669zSG"
+                        },
+                        "mapServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/map/*",
+                            "audienceId": "ZzywViVI8QFSYhTs2i5IHHwvY1Umb01ZxEmd6GR40ZKsipf9MjT5zXHUEzj1EKvGU86oMLD1JMTcfMaGveQGOQW-Jj71zxYb8yrKQaSDgC0k5O"
+                        },
+                        "dacFormServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/dacform/*",
+                            "audienceId": "Dx5uD3Qm9kRISbBxvYPbmRuUq8zRqA8qO9HzQTGSp9L2fLeNnqPpclTyZrnYfngJKX9C0s0usPR3QAJV6eWHnr-rS0vSrmBGYCfbtiVMSMqT0"
+                        },
+                        "tagServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/tagmanager/*",
+                            "audienceId": "hvRFmdVzo77Zhjo6K5lJTsvF03Lw0YUtwK8qfwmyqFEOReE6zL1ITRzgzx3zJQvjmjBVRTrHLSwusWLuL7Wd9kP-jpJZscgsw0KxeYMPCYHHrW"
+                        },
+                        "budgetEnvelopeServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/budgetenvelope/*",
+                            "audienceId": "4RJvY3yWsfkFvzRZqhKMF4Xs1uBaIqczvNBzTWIVUkxzktj5kI3YXPbzZeKB3kXnzzfQiizUCOEQLFvtygQTqC9e-jpJZscgsw0KkEWPDRwrNSy"
+                        },
+                        "demandServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/demandmanager/*",
+                            "audienceId": "3C3odN4hJr0CvQVY2w4LLyMi3eJryi1D0eMRT99pWQhZheYD7WqaC8ixRUe9Zdskhp3NmcrNqs1h0wf1rVnRQG-rS0vSrmBGYCn88WiEVeSPS"
+                        },
+                        "userProfileServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/user-profile/*",
+                            "audienceId": "JvJYrCPaVzrpvKY6Llbsg9vnUHVoQvC0NJcS5JPQTpkcizzSGoP7xK2bv6lxaDwnV3ey3PzvfC4rJ3kVJo4P2oi-Jj71zxYb8yr7ujzQt669zSG"
+                        },
+                        "myPortfolioServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/portfolio/*",
+                            "audienceId": "7yYzXJjJevP5X4GztZTZ8krt9duzarTAIXQKegKVXmtvwMtgheYVQ1J2dWqimRaQtZdSEeUMvgyC4P3ullJi9vm-Jj71zxYb8yrk4on5E6klF8"
+                        },
+                        "processCentreServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/process-centre/*",
+                            "audienceId": "nXePm3o75Fjvb1q0FCoAGv45lH92aHhFDP0J2swb8xRJzqfzuSB52xqZSS64Y3RCr8Oq19u1AJIU2LIIOrprF1-Jj71zxYb8yrk4on5E6klF8"
+                        },
+                        "clockServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/clock/*",
+                            "audienceId": "4LQ4n1kdT9QuvWYNGG5ybdsL5ZDl3FfJXrTDf5TUzeDSsU0LEwScgAvetlYoqW3GFMJYIdYL56zjOKF58zI08bW-Jj71zxYb8yr6vB16EumW8W"
+                        },
+                        "taxonomyServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/taxonomy/*",
+                            "audienceId": "mfKE5mbIiMbYmzocxigbTAWfNZ0Q04EUJRUhX1Y9zWnLnWZwN0qreRcUoaP11adtu4IQPzpbbhskDxwBqZqj1tG-Jj71zxYb8yr7ujzQt669zSG"
+                        },
+                        "taskCentreServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/task-centre/*",
+                            "audienceId": "BcQDKmXf15WqettR0g8tdfiG8zPEMYF5efmXNj6ft5L6FqoM36u8P7Uv1PWMZzGzJOFIAIWXbLmOK4GzmLYJDb8-Jj71zxYb8yrlnXUBOpcKLC"
+                        },
+                        "taskDetailServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/task-detail/*",
+                            "audienceId": "4LQ4n1kdT9QuvWYNGG5ybdsL5ZDl3FfJXrTDf5TUzeDSsU0LEwScgAvetlYoqW3GFMJYIdYL56zjOKF58zI08bW-Jj71zxYb8yr6vB16EumW8W"
+                        },
+                        "taskActionsServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/task-actions/*",
+                            "audienceId": "hU6GTnczKCXzObCQ4AZW0yACxzh6XIiwC2RqqBxrNjfCsdknNsDXa6vGSm77xxhSi0qGr0zHzIJyQhJkGzj7uipm-jpJZscgsw0Kn7lqdbuQJPy"
+                        },
+                        "documentListServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/documentlist/*",
+                            "audienceId": "JFWeIXWNTzMuL4ziek51YpEShTbbqlJGOKq5BqC7M21BDP8uhqXZoA24pHcNOIlBIxSnKC99IBFU7xf28cqmeJ-jpJZscgsw0Ks80Km5kA6Wi"
+                        },
+                        "externalCommunication": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/external-communication/*",
+                            "audienceId": ""
+                        },
+                        "internalCommunicationServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/internal-communication/*",
+                            "audienceId": "41VKQ24TCFOnzceqDn7szOc0bXayng6t6cZMGuaUwC9ssV21oM91uzOklKq2lUdzwezG902EpPdRglt1WGNIlA3-Jj71zxYb8yrk4on5E6klF8"
+                        },
+                        "configurationAdminServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/configuration-admin/*",
+                            "audienceId": "PuWNwjRJczTIyA7OSnwoyDuV0vP2ozb7HpcDN5CYqeczoG1XzhDRSmooPGYssf2L6WUww7jgkUUUetxmNyITHse-10m5aNqpSISf3va3StI2L4"
+                        },
+                        "consultationServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/consultation/*",
+                            "audienceId": ""
+                        },
+                        "pushNotificationServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/compass-corporate/push-notifications/*",
+                            "audienceId": "mfKE5mbIiMbYmzocxigbTAWfNZ0Q04EUJRUhX1Y9zWnLnWZwN0qreRcUoaP11adtu4IQPzpbbhskDxwBqZqj1tG-Jj71zxYb8yr7ujzQt669zSG"
+                        },
+                        "cnsServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/cns/*",
+                            "audienceId": "FcpD67DUAxcqkTNgDZppqeM7j3vVeMoYZdATK7zx8NqeKnA9kw3zME7QLViC31JRDZWXAhNuTC2ow2KWddfsnK-Jj71zxYb8yr7ujzQt669zSG"
+                        },
+                        "eSubBoServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/esubmission/acceptance/*",
+                            "audienceId": "pmJNPrMjkkjrNRSQqv78Jy6TnGAurvnCGHoV6wCyfWNdTALevCgtE31cBx50rDJEHf476q2pgTLWgtEJaludKm-Jj71zxYb8yrk4on5E6klF8"
+                        },
+                        "resultsServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/results/*",
+                            "audienceId": "wso6lAH09R8wl8gNgIbTM9YoFY0jG6JXQRpuR1Z7qCMpe5ev2ewxslAoHU5AB9UV5NUlCZc5TItkXDqvzK0yaS-Jj71zxYb8yr6lc3yzszwTsW"
+                        },
+                        "erequestServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/eprocurement/erequest/acceptance/*",
+                            "audienceId": "NzuRobZxkNzc1FzPqw80ANj70zzc6JqepeEj6xaW750QTxXQ4VdVqrGh3enj0GoQqOzLjwjYrT7N1rLDnvGznnj4-jpJZscgsw0KQEWU9IbQUqK"
+                        },
+                        "ecatalogueServices": {
+                            "endpoint": "https://api.tech.ec.europa.eu/eprocurement/ecatalogue/acceptance/*",
+                            "audienceId": "hfrNu0olrYKCZ7sUJ2NMY2ZOhyTRIJiNAm2uOZnYO9jAdtmc67Pgy3JcDw3dHJ8O5aWc5TChGUSAVlHza7xye0-jpJZscgsw0KQEWU9IbQUqK"
+                        },
+                        "echecklist": {
+                            "endpoint": "https://api.acceptance.tech.ec.europa.eu/echecklist/v1.0/*",
+                            "audienceId": "5GBmBkKpzyCPAUgV0GTo9IgBI5QVVHiWT5hsMlIFs0XYS8NzGYuvgol1Bmkfn77bByrMG98ZLRzItB0o17PVex0-zGrcc7GCOy8puNvyXvfxcy"
+                        },
+                        "procmgr": {
+                            "endpoint": "https://api.tech.ec.europa.eu/eprocurement/procmgr/acceptance/*",
+                            "audienceId": "H4QwTrjzY1HD1Vd8uc4jy02Hr1vPXUHv9znsY2EUszXbUBKQ3WpTeziqwx953POElEOBieopCnzPUOdLKopw8il-jpJZscgsw0KxeYMPCYHHrW"
+                        },
+                        "shortlist": {
+                            "endpoint": "https://api.tech.ec.europa.eu/eprocurement/shortlist/acceptance/*",
+                            "audienceId": "BmdY4MNdFbq2wwPqNHO45gNVbCB0X6ulZg3XLaanHmCPjtDeq4AICkzkFCEqsgNzw8VxzKLXxo5EIBA48yxJrAW-jpJZscgsw0KxeYMPCYHHrW"
+                        },
+                        "babelService": {
+                            "endpoint": "https://api.tech.ec.europa.eu/babel/*",
+                            "audienceId": "8D0nZuaNe7EpIKqBYVOfNEP6g8yzvJWwgq0KyCIsbrOiUm8KTJyD2XL6FeV03CkG8OE2gLctRc9iXrs3FHwLai-rS0vSrmBGYCzSGXJNnzO4kW"
+                        },
+                        "babelAdminService": {
+                            "endpoint": "https://api.tech.ec.europa.eu/babeladm/*",
+                            "audienceId": "8D0nZuaNe7EpIKqBYVOfNEP6g8yzvJWwgq0KyCIsbrOiUm8KTJyD2XL6FeV03CkG8OE2gLctRc9iXrs3FHwLai-rS0vSrmBGYCzSGXJNnzO4kW"
+                        },
+                        "sygma": {
+                            "endpoint": "https://api.tech.ec.europa.eu/opsys-sygma/ui/acceptance/*",
+                            "audienceId": "Cubb5BQCEypbtwUm82SFSzRZdSFrFekkkzclwAIzPLKEFJSfIO81GNdxh4DklU5Q7XtfNmEI59Tw2QD2lKmumPG-jpJZscgsw0Kac98ocG0Ypa"
+                        },
+                        "ccm": {
+                            "endpoint": "https://api.tech.ec.europa.eu/ccm/*"
+                        }
+                    },
+                    "services": {
+                        "paymentForecastService": {
+                            "endpoint": "https://intragate.acceptance.ec.europa.eu/opsys-payment-forecast-backend/*",
+                            "audienceId": "wxiMJPzsSMRT6w1F230X4jTztNPFLR2Csq1b1jsoPtKpvSFEwby644KQPUOeYY5pcQhJeGrkdENBB5AoLp1fsR-NaAc23CqASe1YiP0I1JzQ6"
+                        },
+                        "l2Planning": {
+                            "endpoint": "https://intragate.acceptance.ec.europa.eu/opsys-level2-planning-backend/*",
+                            "audienceId": "fgli3zv60PJbSNuAS4jsezxCbjSQ8QLWKOXRLRJINc9hjLIukzauFrh1iuiVW25hKkvef2XRU9779EZRK7zZNwu-NaAc23CqASe1YiP0I1JzQ6"
+                        }
+                    }
+                },
+                "modules": {
+                    "core": {
+                        "api": {
+                            "base": "",
+                            "user": {
+                                "base": "",
+                                "detail": "https://api.tech.ec.europa.eu/compass-corporate/user-profile/user/details",
+                                "preferences": "https://api.tech.ec.europa.eu/compass-corporate/user-profile/user/preferences",
+                                "profile": "https://api.tech.ec.europa.eu/compass-corporate/user-profile/user/profile"
+                            },
+                            "userOrg": {
+                                "users": "https://api.tech.ec.europa.eu/compass-corporate/user-profile/users",
+                                "organisations": "https://api.tech.ec.europa.eu/compass-corporate/user-profile/organisations"
+                            }
+                        }
+                    },
+                    "feedbackTools": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/compass-corporate/contact/acceptance/"
+                        }
+                    },
+                    "notifications": {
+                        "api": {
+                            "clientSystemKey": "KEY-OPSYS-MtD5EghIR6",
+                            "clientSystemPassword": "secret",
+                            "base": "https://api.tech.ec.europa.eu/cns/v1/",
+                            "ecasEnvironment": "PROD"
+                        }
+                    },
+                    "corporateSearch": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/compass-corporate/restproxy/acceptance/es/rest/search"
+                        }
+                    },
+                    "portail": {
+                        "api": {
+                            "base": "",
+                            "web": "https://api.tech.ec.europa.eu/compass-corporate/iop-auxiliary-rest/acceptance"
+                        }
+                    },
+                    "ccm2": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/compass-corporate/iop-auxiliary-rest/acceptance/codes/RELEX/",
+                            "codes": "https://api.tech.ec.europa.eu/compass-corporate/iop-auxiliary-rest/acceptance/codes/"
+                        }
+                    },
+                    "processCentre": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/process-centre/acceptance/",
+                            "rdis2EmbeddedUrl": "https://intragate.acceptance.ec.europa.eu/sfc2014/rdis2",
+                            "rdis2ImpersonationEnabled": true,
+                            "setLanguageHeader": true
+                        }
+                    },
+                    "processCentreAdmin": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/process-centre/acceptance/admin/",
+                            "setLanguageHeader": true
+                        }
+                    },
+                    "echecklist": {
+                        "api": {
+                            "base": "https://api.acceptance.tech.ec.europa.eu/echecklist/v1.0"
+                        },
+                        "widgetUrl": "https://intragate.development.ec.europa.eu/echecklist/widget/bower_components/eckl-widget/eckl-widget.html",
+                        "groupKey": "FACTORYTEST_STEP_KEY"
+                    },
+                    "portfolio": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/portfolio/acceptance/",
+                            "proxy": "",
+                            "taxonomy": "https://api.tech.ec.europa.eu/compass-corporate/taxonomy/api/v1/taxonomy/hierarchy/PortfolioManager",
+                            "setLanguageHeader": true
+                        }
+                    },
+                    "clock": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/clock/acceptance/",
+                            "proxy": ""
+                        }
+                    },
+                    "taxonomy": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/taxonomy/api/v1/taxonomy/",
+                            "proxy": "",
+                            "filter": "",
+                            "setLanguageHeader": true
+                        }
+                    },
+                    "taskManager": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/task-centre/",
+                            "proxy": "",
+                            "setLanguageHeader": true
+                        }
+                    },
+                    "taskDetails": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/task-detail/",
+                            "proxy": ""
+                        }
+                    },
+                    "taskActions": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/task-actions/acceptance/",
+                            "proxy": ""
+                        }
+                    },
+                    "documentManager": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/documentlist/",
+                            "proxy": ""
+                        }
+                    },
+                    "externalCommunication": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/compass-corporate/external-communication/",
+                            "proxy": ""
+                        }
+                    },
+                    "internalCommunication": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/compass-corporate/internal-communication/"
+                        }
+                    },
+                    "configurationAdmin": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/compass-corporate/configuration-admin/"
+                        }
+                    },
+                    "consultation": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/compass-corporate/consultation/"
+                        }
+                    },
+                    "oe": {
+                        "api": {
+                            "base": "",
+                            "action": "https://api.tech.ec.europa.eu/compass-corporate/restproxy/acceptance/oe/rest/action/v1",
+                            "contract": "https://api.tech.ec.europa.eu/compass-corporate/restproxy/acceptance/oe/rest/contract/v1",
+                            "portfolio": "https://api.tech.ec.europa.eu/compass-corporate/restproxy/acceptance/oe/rest/portfolio2/v1",
+                            "intervention": "https://api.tech.ec.europa.eu/compass-corporate/restproxy/acceptance/oe/rest/intervention/v1",
+                            "related-contracts": "https://api.tech.ec.europa.eu/compass-corporate/restproxy/acceptance/oe/rest/related-contracts/v1"
+                        }
+                    },
+                    "gem": {
+                        "api": {
+                            "base": "",
+                            "layout": "https://api.tech.ec.europa.eu/map/acceptance/gem/rest/layouts/",
+                            "data": "https://api.tech.ec.europa.eu/map/acceptance/gem/rest/items/",
+                            "navigation": "https://api.tech.ec.europa.eu/map/acceptance/gem/rest/items/",
+                            "search": "https://api.tech.ec.europa.eu/map/acceptance/gem/rest/search/",
+                            "service": "https://api.tech.ec.europa.eu/map/acceptance/gem/rest/"
+                        }
+                    },
+                    "track3": {
+                        "api": {
+                            "base": "",
+                            "ipds": "https://api.tech.ec.europa.eu/map/acceptance/track3/resttrack3/ipds/",
+                            "ipdAllocations": "https://api.tech.ec.europa.eu/map/acceptance/track3/resttrack3/ipd-allocations/",
+                            "service": "https://api.tech.ec.europa.eu/map/acceptance/track3/resttrack3/"
+                        }
+                    },
+                    "dacform": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/dacform/acceptance/",
+                            "proxy": ""
+                        }
+                    },
+                    "tag": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/tagmanager/acceptance/",
+                            "service": "objectTypes/"
+                        }
+                    },
+                    "budgetEnvelope": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/budgetenvelope/acceptance/",
+                            "proxy": ""
+                        }
+                    },
+                    "demand": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/demandmanager/acceptance/",
+                            "proxy": ""
+                        }
+                    },
+                    "resulttrack3": {
+                        "api": {
+                            "base": "",
+                            "web": "https://api.tech.ec.europa.eu/results/acceptance/rest/V1/"
+                        }
+                    },
+                    "result": {
+                        "api": {
+                            "base": "",
+                            "web": "https://api.tech.ec.europa.eu/results/acceptance/rest/web",
+                            "business": "https://api.tech.ec.europa.eu/results/acceptance/rest/business/v1/"
+                        }
+                    },
+                    "resultQualityManagement": {
+                        "api": {
+                            "base": "",
+                            "web": "https://api.tech.ec.europa.eu/results/acceptance/rest/web",
+                            "business": "https://api.tech.ec.europa.eu/results/acceptance/rest/business/v1/"
+                        }
+                    },
+                    "sygma": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/opsys-sygma/ui/acceptance"
+                        }
+                    },
+                    "ehelp": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/ehelp/"
+                        }
+                    },
+                    "ccm": {
+                        "api": {
+                            "base": "",
+                            "service": "https://api.tech.ec.europa.eu/ccm/acceptance/"
+                        }
+                    },
+                    "procmgr": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/eprocurement/procmgr/acceptance/"
+                        }
+                    },
+                    "shortlist": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/eprocurement/shortlist/acceptance/"
+                        }
+                    },
+                    "awarding": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/compass-corporate/restproxy/acceptance/awarding/"
+                        }
+                    },
+                    "rfs": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/eprocurement/erequest/acceptance"
+                        }
+                    },
+                    "catalog": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/eprocurement/ecatalogue/acceptance"
+                        },
+                        "modelApi": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/eprocurement/ecatalogue/acceptance"
+                        },
+                        "dataApi": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/eprocurement/erequest/acceptance"
+                        }
+                    },
+                    "budgetBreakdown": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/eprocurement/erequest/acceptance"
+                        }
+                    },
+                    "deliverables": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/eprocurement/erequest/acceptance"
+                        }
+                    },
+                    "procinfo": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/eprocurement/erequest/acceptance"
+                        }
+                    },
+                    "esub": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://api.tech.ec.europa.eu/esubmission/acceptance/"
+                        }
+                    },
+                    "paymentForecast": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://intragate.acceptance.ec.europa.eu/opsys-payment-forecast-backend/"
+                        }
+                    },
+                    "level2Forecast": {
+                        "api": {
+                            "base": "",
+                            "proxy": "https://intragate.acceptance.ec.europa.eu/opsys-level2-planning-backend/"
+                        }
+                    },
+                    "cotg": {
+                        "api": {
+                            "base": "",
+                            "absenceManagement": "https://api.tech.ec.europa.eu/cotg/v1/absenceManagement/",
+                            "timeSheetManagement": "https://api.tech.ec.europa.eu/cotg/v1/timeSheetManagement/"
+                        }
+                    },
+                    "pushNotifications": {
+                        "clientsUrl": "https://api.tech.ec.europa.eu/compass-corporate/push-notifications/acceptance/sse/clients",
+                        "heartbeatTimeout": 3600000
+                    },
+                    "availableProcedureActions": {
+                        "api": {
+                            "base": "https://api.tech.ec.europa.eu/eprocurement/procmgr/acceptance/api/procmgr/mycalls/procedureActions/availableProcedureActions",
+                            "proxy": ""
+                        }
+                    },
+                    "translations": {
+                        "api": {
+                            "base": "",
+                            "query": "https://api.tech.ec.europa.eu/babel/acceptance/query/",
+                            "admin": "https://api.tech.ec.europa.eu/babeladm/acceptance/admin/"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

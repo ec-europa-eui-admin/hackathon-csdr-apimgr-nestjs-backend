@@ -1,17 +1,16 @@
-export declare class ApiGateWayDto {
+export declare class ApiGateWayAppDto {
     readonly name: string;
     readonly apiGateWayId: string;
-    readonly subscribedSources: Array<string>;
 }
-export declare type ApiGatewayAppSubscriptions = {
-    subscriptionId: string;
-    apiIdentifier: string;
-    applicationId: string;
-    tier: string;
-    callError: boolean;
-    callErrorMessage: string;
-    callID: string;
-};
-export declare type ApiGateWayAppSubscribeToApi = {
+export declare class AppSubscriptionsDto {
+    readonly subscriptionId: string;
+    readonly apiIdentifier: string;
+    readonly applicationId: string;
+    readonly tier: string;
+    readonly callError: boolean;
+    readonly callErrorMessage: string;
+    readonly callID: string;
+}
+export declare class ApiIdListDto {
     idList: Array<String>;
-};
+}
