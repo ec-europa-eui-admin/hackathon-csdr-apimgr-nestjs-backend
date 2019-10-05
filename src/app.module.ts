@@ -9,7 +9,7 @@ import { ApiGatewayModule } from './api-gateway/api-gateway.module';
 @Module({
     imports: [
         HttpModule,
-        MongooseModule.forRoot('mongodb://localhost:27017'),
+        MongooseModule.forRoot('mongodb://mongo:27017/docker-node-mongo'),
         EuiAppsModule,
         ApiGatewayModule,
     ],
