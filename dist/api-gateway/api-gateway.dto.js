@@ -21,6 +21,85 @@ __decorate([
     __metadata("design:type", String)
 ], ApiGateWayAppDto.prototype, "apiGateWayId", void 0);
 exports.ApiGateWayAppDto = ApiGateWayAppDto;
+class ApiGateWayAPIDto {
+}
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "id", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "name", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "description", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "context", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "version", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "provider", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "status", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "visibity", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "sequences", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "corsConfiguration", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "businessInformation", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "gatewayEnvironments", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "endpointConfig", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "callError", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "callErrorMessage", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "callID", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", String)
+], ApiGateWayAPIDto.prototype, "wsdlUri", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", Boolean)
+], ApiGateWayAPIDto.prototype, "isDefaultVersion", void 0);
+__decorate([
+    swagger_1.ApiModelProperty(),
+    __metadata("design:type", Object)
+], ApiGateWayAPIDto.prototype, "", void 0);
+exports.ApiGateWayAPIDto = ApiGateWayAPIDto;
 class AppSubscriptionsDto {
 }
 __decorate([

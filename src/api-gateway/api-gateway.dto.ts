@@ -7,6 +7,46 @@ export class ApiGateWayAppDto {
     readonly apiGateWayId: string;
 }
 
+export class ApiGateWayAPIDto {
+    @ApiModelProperty()
+    readonly id: string;
+    @ApiModelProperty()
+    readonly name: string;
+    @ApiModelProperty()
+    readonly description: string;
+    @ApiModelProperty()
+    readonly context: string;
+    @ApiModelProperty()
+    readonly version: string;
+    @ApiModelProperty()
+    readonly provider: string;
+    @ApiModelProperty()
+    readonly status: string;
+    @ApiModelProperty()
+    readonly visibity: string;
+    @ApiModelProperty()
+    readonly sequences: string;
+    @ApiModelProperty()
+    readonly corsConfiguration: string;
+    @ApiModelProperty()
+    readonly businessInformation: string;
+    @ApiModelProperty()
+    readonly gatewayEnvironments: string;
+    @ApiModelProperty()
+    readonly endpointConfig: string;
+    @ApiModelProperty()
+    readonly callError: string;
+    @ApiModelProperty()
+    readonly callErrorMessage: string;
+    @ApiModelProperty()
+    readonly callID: string;
+    @ApiModelProperty()
+    readonly wsdlUri: string;
+    @ApiModelProperty()
+    readonly isDefaultVersion: boolean;
+    @ApiModelProperty()
+}
+
 
 export class AppSubscriptionsDto {
     @ApiModelProperty()

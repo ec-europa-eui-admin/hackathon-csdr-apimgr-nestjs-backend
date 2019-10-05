@@ -1,7 +1,7 @@
 import { Injectable, HttpService, Inject } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { ApiGateWayAppDto, ApiIdListDto, AppSubscriptionsDto } from './api-gateway.dto';
+import { ApiGateWayAppDto, ApiIdListDto, AppSubscriptionsDto, ApiGateWayAPIDto } from './api-gateway.dto';
 
 @Injectable()
 export class ApiGatewayService {
@@ -10,6 +10,19 @@ export class ApiGatewayService {
 
     constructor(private readonly httpService: HttpService) {
 
+    }
+
+    searchAPIByName(APIName: string): Observable<Array<ApiGateWayAPIDto>>{
+        let username = this.username;
+        let password = this.password;
+        const url = 'https://gateway.theinterlink.eu:8443/rest?api_name=' + APIName;
+        return this.httpService.get(url, {
+            auth: {
+                username,
+                password,
+            },
+        }).pipe(map(res => res.data),
+            map(data => data.list));        
     }
 
     getGatewayApps(): Observable<Array<ApiGateWayAppDto>> {

@@ -17,6 +17,17 @@ let ApiGatewayService = class ApiGatewayService {
         this.username = 'gy93144GEaTQP0MRzaohzs3_Zw4a';
         this.password = 'D5BR8faUqKrssAEosBtABO3AiJAa';
     }
+    searchAPIByName(APIName) {
+        let username = this.username;
+        let password = this.password;
+        const url = 'https://gateway.theinterlink.eu:8443/rest?api_name=' + APIName;
+        return this.httpService.get(url, {
+            auth: {
+                username,
+                password,
+            },
+        }).pipe(operators_1.map(res => res.data), operators_1.map(data => data.list));
+    }
     getGatewayApps() {
         let username = this.username;
         let password = this.password;

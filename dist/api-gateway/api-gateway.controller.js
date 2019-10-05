@@ -23,6 +23,9 @@ let ApiGatewayController = class ApiGatewayController {
     constructor(apiGatewayService) {
         this.apiGatewayService = apiGatewayService;
     }
+    searchAPI(api_name) {
+        return this.apiGatewayService.searchAPIByName(api_name);
+    }
     findAll(query) {
         return this.apiGatewayService.getGatewayApps();
     }
@@ -36,6 +39,13 @@ let ApiGatewayController = class ApiGatewayController {
         return this.apiGatewayService.subscribeToApi(appId, apiIdList);
     }
 };
+__decorate([
+    common_1.Get('apis/:api_name'),
+    __param(0, common_1.Param('api_name')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", rxjs_2.Observable)
+], ApiGatewayController.prototype, "searchAPI", null);
 __decorate([
     common_1.Get('applications'),
     __param(0, common_1.Query()),
