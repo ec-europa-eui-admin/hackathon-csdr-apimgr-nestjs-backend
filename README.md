@@ -28,6 +28,10 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## MongoDb
+
+mongodb://mongo:27017/docker-node-mongo
+
 ## Installation
 
 ```bash
