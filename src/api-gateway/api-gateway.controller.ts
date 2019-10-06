@@ -2,7 +2,7 @@ import { Controller, Get, Query, Post, Body, Put, Param, Delete } from '@nestjs/
 import { ApiGatewayService } from './api-gateway.service';
 import { map, switchMap } from 'rxjs/operators';
 import { forkJoin } from 'rxjs';
-import { ApiGateWayAppDto, ApiIdListDto, ApiGateWayAPIDto } from './api-gateway.dto';
+import { ApiGateWayAppDto, ApiIdListDto, ApiGateWayApiDto } from './api-gateway.dto';
 import { Observable } from 'rxjs';
 import { ApiUseTags } from '@nestjs/swagger';
 
@@ -14,10 +14,10 @@ export class ApiGatewayController {
     }
 
     @Get('apis/:api_name')
-    searchAPI(@Param('api_name') api_name: string): Observable<Array<ApiGateWayAPIDto>> {
-        return this.apiGatewayService.searchAPIByName(api_name);
+    searchAPI(@Param('api_name') api_name: string): Observable<Array<ApiGateWayApiDto>> {
+        return this.apiGatewayService.searchApiByName(api_name);
     }
- 
+
     @Get('applications')
     findAll(@Query() query: any): Observable<Array<ApiGateWayAppDto>> {
         return this.apiGatewayService.getGatewayApps();

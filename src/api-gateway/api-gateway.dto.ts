@@ -7,7 +7,7 @@ export class ApiGateWayAppDto {
     readonly apiGateWayId: string;
 }
 
-export class ApiGateWayAPIDto {
+export class ApiGateWayApiDto {
     @ApiModelProperty()
     readonly id: string;
     @ApiModelProperty()
