@@ -95,10 +95,6 @@ __decorate([
     swagger_1.ApiModelProperty(),
     __metadata("design:type", Boolean)
 ], ApiGateWayAPIDto.prototype, "isDefaultVersion", void 0);
-__decorate([
-    swagger_1.ApiModelProperty(),
-    __metadata("design:type", Object)
-], ApiGateWayAPIDto.prototype, "", void 0);
 exports.ApiGateWayAPIDto = ApiGateWayAPIDto;
 class AppSubscriptionsDto {
 }

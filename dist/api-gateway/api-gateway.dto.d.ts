@@ -21,7 +21,6 @@ export declare class ApiGateWayAPIDto {
     readonly callID: string;
     readonly wsdlUri: string;
     readonly isDefaultVersion: boolean;
-    : any;
 }
 export declare class AppSubscriptionsDto {
     readonly subscriptionId: string;

@@ -18,7 +18,7 @@ AppModule = __decorate([
     common_1.Module({
         imports: [
             common_1.HttpModule,
-            mongoose_1.MongooseModule.forRoot('mongodb://localhost:27017', { useNewUrlParser: true }),
+            mongoose_1.MongooseModule.forRoot('mongodb://localhost:27017'),
             eui_apps_module_1.EuiAppsModule,
             api_gateway_module_1.ApiGatewayModule,
         ],

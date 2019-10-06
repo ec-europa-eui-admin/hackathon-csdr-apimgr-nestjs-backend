@@ -1662,8 +1662,8 @@
         "signature": "8548a1a83c1091e8c7a355b7edf031854b007d10a7fa24e180a95d608c87704e"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/api-gateway/api-gateway.dto.ts": {
-        "version": "e8b25c8d4ffb716509bb7ef0419a50b3fb23ed06483eb4bcf0f847d97f693526",
-        "signature": "d65af3a77e86298975ffe7db00a97db667eedfebd27f619f89e6d996eeb9b011"
+        "version": "08990f679175c4e7c8c765e7387e668b1adde13c4fbe2d3d5387c1e6ff9cf4b3",
+        "signature": "9b76b18949679a0bf50698c4b3d9fc8587994b3fc8fe424e6f60d02eae7ccea5"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/api-gateway/api-gateway.service.ts": {
         "version": "b1697c76e43b5fd0a35e8f38c2b6bb6146cab1e2b0a280558ffb14290285b68d",
@@ -1678,7 +1678,7 @@
         "signature": "0d9d0e2d4197da2d018d085c3844d27bec49e24a76ce1dd96ea1848a55dce40f"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/app.module.ts": {
-        "version": "64522854c63f71eebe1ad128bef27c0b4cca05a79506268d9b78d8c7fecae17f",
+        "version": "5a7e76e7b23b6b11aa4f99847b4e1e06e7518ba0a882de4db1f707904331ceb0",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -8735,6 +8735,11 @@
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/rxjs/internal/operators/zip.d.ts",
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/rxjs/internal/operators/zipall.d.ts",
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/rxjs/operators/index.d.ts",
+      "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/api-gateway/api-gateway.dto.ts",
+      "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/api-gateway/api-gateway.service.ts",
+      "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/api-gateway/api-gateway.controller.ts",
+      "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/api-gateway/api-gateway.module.ts",
+      "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/app.module.ts",
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/@nestjs/core/adapters/index.d.ts",
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/@nestjs/core/constants.d.ts",

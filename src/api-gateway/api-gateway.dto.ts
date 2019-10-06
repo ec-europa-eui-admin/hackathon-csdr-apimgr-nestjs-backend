@@ -44,7 +44,6 @@ export class ApiGateWayAPIDto {
     readonly wsdlUri: string;
     @ApiModelProperty()
     readonly isDefaultVersion: boolean;
-    @ApiModelProperty()
 }
 
 
