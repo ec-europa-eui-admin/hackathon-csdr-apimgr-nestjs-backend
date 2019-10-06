@@ -14,7 +14,7 @@ export const EnvConfigSchema = new mongoose.Schema({
 
 export const EuiAppSchema = new mongoose.Schema({
     name: String,
-    description: String,
+    desc: String,
     envConfigs: [EnvConfigSchema],
     roleId: [String],
 });
