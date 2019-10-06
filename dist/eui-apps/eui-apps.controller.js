@@ -16,18 +16,19 @@ const common_1 = require("@nestjs/common");
 const eui_apps_dto_1 = require("./eui-apps.dto");
 const eui_apps_service_1 = require("./eui-apps.service");
 const swagger_1 = require("@nestjs/swagger");
+const swagger_2 = require("@nestjs/swagger");
 let EuiAppsController = class EuiAppsController {
     constructor(euiAppsService) {
         this.euiAppsService = euiAppsService;
     }
-    create(createEuiAppDto) {
-        return this.euiAppsService.create(createEuiAppDto);
-    }
-    findAll() {
-        return this.euiAppsService.findAll();
+    findAll(name) {
+        return this.euiAppsService.findAll(name);
     }
     findOne(id) {
         return this.euiAppsService.findOne(id);
+    }
+    create(createEuiAppDto) {
+        return this.euiAppsService.create(createEuiAppDto);
     }
     update(id, updateEuiAppDto) {
         return this.euiAppsService.update(id, updateEuiAppDto);
@@ -46,16 +47,15 @@ let EuiAppsController = class EuiAppsController {
     }
 };
 __decorate([
-    common_1.Post(),
-    __param(0, common_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [eui_apps_dto_1.EuiAppDto]),
-    __metadata("design:returntype", Promise)
-], EuiAppsController.prototype, "create", null);
-__decorate([
     common_1.Get(),
+    swagger_2.ApiImplicitQuery({
+        name: 'name',
+        type: String,
+        required: false
+    }),
+    __param(0, common_1.Query('name')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], EuiAppsController.prototype, "findAll", null);
 __decorate([
@@ -65,6 +65,13 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], EuiAppsController.prototype, "findOne", null);
+__decorate([
+    common_1.Post(),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [eui_apps_dto_1.EuiAppDto]),
+    __metadata("design:returntype", Promise)
+], EuiAppsController.prototype, "create", null);
 __decorate([
     common_1.Put(':id'),
     __param(0, common_1.Param('id')), __param(1, common_1.Body()),

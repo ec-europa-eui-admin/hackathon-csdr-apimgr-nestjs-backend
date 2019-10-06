@@ -3,6 +3,8 @@ import { AppConfigurationDto, EnvConfigDto, EuiAppDto } from './eui-apps.dto';
 import { EuiAppsService } from './eui-apps.service';
 import { EuiApp } from './eui-apps.interface';
 import { ApiUseTags } from '@nestjs/swagger';
+import { ApiImplicitQuery } from '@nestjs/swagger';
+
 
 @ApiUseTags('eui-apps')
 @Controller('eui-apps')
@@ -12,19 +14,24 @@ export class EuiAppsController {
     ) {
     }
 
-    @Post()
-    create(@Body() createEuiAppDto: EuiAppDto): Promise<EuiApp> {
-        return this.euiAppsService.create(createEuiAppDto);
-    }
-
     @Get()
-    findAll(): Promise<EuiApp[]> {
-        return this.euiAppsService.findAll();
+    @ApiImplicitQuery({
+        name: 'name',
+        type: String,
+        required: false
+    })
+    findAll(@Query('name') name: string): Promise<EuiApp[]> {
+        return this.euiAppsService.findAll(name);
     }
 
     @Get(':id')
     findOne(@Param('id') id: string) {
         return this.euiAppsService.findOne(id);
+    }
+
+    @Post()
+    create(@Body() createEuiAppDto: EuiAppDto): Promise<EuiApp> {
+        return this.euiAppsService.create(createEuiAppDto);
     }
 
     @Put(':id')

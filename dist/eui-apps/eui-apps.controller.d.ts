@@ -4,9 +4,9 @@ import { EuiApp } from './eui-apps.interface';
 export declare class EuiAppsController {
     private euiAppsService;
     constructor(euiAppsService: EuiAppsService);
-    create(createEuiAppDto: EuiAppDto): Promise<EuiApp>;
-    findAll(): Promise<EuiApp[]>;
+    findAll(name: string): Promise<EuiApp[]>;
     findOne(id: string): Promise<EuiApp>;
+    create(createEuiAppDto: EuiAppDto): Promise<EuiApp>;
     update(id: string, updateEuiAppDto: EuiAppDto): Promise<EuiApp>;
     save(id: string, updateEuiAppDto: EuiAppDto): Promise<EuiApp>;
     updateEnvConfig(appId: string, envConfigId: string, updateEnvConfigDto: EnvConfigDto): Promise<EuiApp>;

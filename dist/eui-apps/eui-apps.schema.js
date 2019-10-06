@@ -13,7 +13,7 @@ exports.EnvConfigSchema = new mongoose.Schema({
 });
 exports.EuiAppSchema = new mongoose.Schema({
     name: String,
-    description: String,
+    desc: String,
     envConfigs: [exports.EnvConfigSchema],
     roleId: [String],
 });

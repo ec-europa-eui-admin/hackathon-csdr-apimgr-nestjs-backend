@@ -26,8 +26,11 @@ let EuiAppsService = class EuiAppsService {
         const createdEuiApp = new this.euiAppModel(createEuiAppDto);
         return await createdEuiApp.save();
     }
-    async findAll() {
-        return await this.euiAppModel.find().exec();
+    async findAll(name) {
+        if (name)
+            return await this.euiAppModel.find({ name: name }).exec();
+        else
+            return await this.euiAppModel.find().exec();
     }
     async findOne(_id) {
         return await this.euiAppModel.findOne({ _id }).exec();

@@ -7,7 +7,7 @@ export declare class EuiAppsService {
     private readonly appConfigurationModel;
     constructor(euiAppModel: Model<EuiApp>, envConfigModel: Model<EnvConfig>, appConfigurationModel: Model<AppConfiguration>);
     create(createEuiAppDto: EuiAppDto): Promise<EuiApp>;
-    findAll(): Promise<EuiApp[]>;
+    findAll(name?: string): Promise<EuiApp[]>;
     findOne(_id: any): Promise<EuiApp>;
     update(_id: any, data: EuiAppDto): Promise<EuiApp>;
     save(_id: any, data: EuiAppDto): Promise<EuiApp>;

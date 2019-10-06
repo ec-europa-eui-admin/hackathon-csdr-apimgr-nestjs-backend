@@ -1086,8 +1086,8 @@
         "signature": "d8f4cb0109c1b399d657807fd6af504d74a9300325e0fc915abdbf658b464a97"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/app.controller.ts": {
-        "version": "3469c5aa62e1ba5b183d9bb9d40193e91aa761fc5734d332650b0bd49c346266",
-        "signature": "3293b0d1d6a7f902316e164fcf36ae099f1bbb0224484586eaab30d9dea78d32"
+        "version": "69ab22b35180fa58f1aae0b116301e262a4749815f765d9b4ba6808519fdeccc",
+        "signature": "f9223842d8194dca72ebb7bccca25161a870b45e8926fd4f3bee15696e5a4492"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts": {
         "version": "120fe6ff3f553b3d2a0e065b6fea421698be40a802273652871273338085873c",
@@ -1122,7 +1122,7 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.schema.ts": {
-        "version": "53c8e853be24ee5b251d76e214b90d0c716616bfb44f82e3fe3d749957fc2f3e",
+        "version": "af27fd87887f818cd37353c5c0ff59260abfee8207edd6784abffe7fd548d088",
         "signature": "b6fdea04d278903a0fcab6db9944674cf24a83a38b0cfea7e98093464c47e9b1"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/@nestjs/swagger/dist/decorators/api-operation.decorator.d.ts": {
@@ -1238,12 +1238,12 @@
         "signature": "2b3844d1d319de459d9a8f36502a95d30fbe1dd380d17d26e76a45a302d37092"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.service.ts": {
-        "version": "a37e182c210e764c48bfc7fb857a66d9cc309140307b94c4c0be5bf204339301",
-        "signature": "622a48467d4c38cf21a62054692dee6f75260887884fdeac2234f46878cf4941"
+        "version": "0216be74fb0e99d5044af868682e44781f1d22b0ec0d4bec32481677003340d1",
+        "signature": "14445a766bb428b9679ee88853261c08ed1c6952d6d599809e171eb9aea4e122"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.controller.ts": {
-        "version": "7dc1310c5043b439205e9f5f2b9f9b8f55c71764040f025cf1d2c44d58296874",
-        "signature": "addabbfa49f0d39a8450e2ddfa648cb851a4d7bfe66a34cd5d67714ace3c694c"
+        "version": "179d95f24c657bd746b3983c6a9c74495a4b74b5cce9b7161cf028093934292f",
+        "signature": "0a724f9f5012dd0055281b7a0b5cdc5707d98fe1bf703775e11dd5e897fb84ca"
       },
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.module.ts": {
         "version": "59a5ed045457b3f1cf8728fabc5d18bdbad6fb7d1a9b0bee6e87c02972d0d288",
@@ -6996,8 +6996,8 @@
       ],
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.controller.ts": [
         "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.service.ts",
-        "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.dto.ts",
-        "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.interface.ts"
+        "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.interface.ts",
+        "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/src/eui-apps/eui-apps.dto.ts"
       ],
       "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/rxjs/internal/operators/audit.d.ts": [
         "c:/users/pauld/angularprojects/csdr-root/packages/apimgr-nestjs-backend/node_modules/rxjs/internal/types.d.ts",

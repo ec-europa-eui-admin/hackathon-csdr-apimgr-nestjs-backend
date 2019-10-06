@@ -18,8 +18,11 @@ export class EuiAppsService {
         return await createdEuiApp.save();
     }
 
-    async findAll(): Promise<EuiApp[]> {
-        return await this.euiAppModel.find().exec();
+    async findAll(name?: string): Promise<EuiApp[]> {
+        if(name)
+            return await this.euiAppModel.find({name: name}).exec();
+        else
+            return await this.euiAppModel.find().exec();
     }
 
     async findOne(_id): Promise<EuiApp> {
