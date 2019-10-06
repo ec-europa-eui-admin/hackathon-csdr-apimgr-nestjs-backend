@@ -10,7 +10,6 @@ async function bootstrap() {
         .setTitle('Eui Platform')
         .setDescription('Eui Platform Configuration Manager')
         .setVersion('1.0')
-        .addTag('cats')
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, options);
     swagger_1.SwaggerModule.setup('swagger', app, document);
